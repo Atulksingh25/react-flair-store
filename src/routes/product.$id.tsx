@@ -94,7 +94,7 @@ function ProductPage() {
           <p className="mt-5 text-sm leading-relaxed text-foreground">{product.description}</p>
           <h2 className="mt-5 text-base font-semibold">About this item</h2>
           <ul className="mt-2 space-y-1.5 text-sm">
-            {product.bullets.map((b) => (
+            {product.bullets.map((b: string) => (
               <li key={b} className="flex gap-2">
                 <Check size={16} className="mt-0.5 shrink-0 text-success" />
                 <span>{b}</span>
