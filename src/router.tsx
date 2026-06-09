@@ -7,6 +7,8 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
+    // GitHub Pages ke subfolder routing ke liye basepath add kiya
+    basepath: "/react-flair-store", 
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,

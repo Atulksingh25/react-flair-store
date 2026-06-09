@@ -4,6 +4,9 @@ import { tanstackRouterVite } from '@tanstack/router-plugin';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
+  // 1. GitHub Pages ke liye base path set kiya
+  base: '/react-flair-store/',
+
   plugins: [
     tanstackRouterVite(),
     react(),
@@ -17,5 +20,10 @@ export default defineConfig({
     alias: {
       '@': '/src',
     },
+  },
+  // 2. Build folder ka naam badalkar 'dist' kiya jo Vite ka default hota hai
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
   },
 });
